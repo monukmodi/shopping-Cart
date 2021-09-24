@@ -10,9 +10,9 @@ const Cart = ({cartItems,removeFromCart}) => {
     });
     return (
         <div>
-            {cartItems.length == 0 && (
+            {/* {cartItems.length == 0 && (
                 <div className="cart-items-empty"> No items are added. </div>
-            )}
+            )} */}
             {cartItems.length > 0 && (
                 <div>
                 <div className="added-cart-items">
