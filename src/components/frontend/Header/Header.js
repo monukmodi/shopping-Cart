@@ -5,7 +5,6 @@ const Header = ({cartItems, removeFromCart}) => {
     const [cartTrue, setCartTrue] = useState(false)
 
     const ChangeConsole = () => {
-        console.log("Hello")
         setCartTrue(true)
     }
     return (

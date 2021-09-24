@@ -14,13 +14,11 @@ const App = () => {
       setCartItems(cartItems.map((item) => item.id === product.id ? 
         {...ProductExist, quantity: ProductExist.quantity + 1} : item
       ))
-      console.log("If")
     }
     else{
 
       setCartItems([...cartItems,{...product,quantity:1}])
-      console.log("Else")
-    }
+      }
   }
 
   const removeFromCart = (productToRemove) => {
@@ -38,17 +36,17 @@ const App = () => {
     setData(updatedItems);
     setCount(countItems)
   }
-  const UpdatePrice = () => {
-    const sortedPrice = productItems.sort(function(a, b) {
-      return parseFloat(a.price) - parseFloat(b.price);
-  });
-  // setData(sortedPrice);
-  }
+  // const UpdatePrice = () => {
+  //   const sortedPrice = productItems.sort(function(a, b) {
+  //     return parseFloat(a.price) - parseFloat(b.price);
+  // });
+  // // setData(sortedPrice);
+  // }
  
   return (
     <div>
       <Header cartItems={cartItems} removeFromCart={removeFromCart} handleAddProduct={handleAddProduct} />
-      <Products productItems={data} handleAddProduct={handleAddProduct} filterProductBySize={filterProductBySize} count={count} UpdatePrice={UpdatePrice}   />
+      <Products productItems={data} handleAddProduct={handleAddProduct} filterProductBySize={filterProductBySize} count={count} />
     </div>
   )
 }

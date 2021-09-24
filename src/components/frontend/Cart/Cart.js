@@ -10,7 +10,6 @@ const Cart = ({cartItems,removeFromCart}) => {
     });
     return (
         <div>
-            {console.log("TotalPrice",sum)}
             {cartItems.length == 0 && (
                 <div className="cart-items-empty"> No items are added. </div>
             )}

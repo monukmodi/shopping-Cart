@@ -87,3 +87,7 @@
     width: 45px;
     margin: 5px;
   }
+  .Head{
+    display: flex;
+    justify-content: space-between;
+  }
