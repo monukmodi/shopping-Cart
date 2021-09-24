@@ -4,7 +4,16 @@ const Products = ({productItems,handleAddProduct,count}) => {
     return (
         <div className="products">
             <div className="row">
-                <h3>{count} Products found</h3>
+                <div className="Head">
+                <h4>{count} Products found</h4>
+                <div>
+                    <label >Order By:</label>
+                    <select name="cars" id="cars">
+                        <option >High to Low</option>
+                        <option >Low to High</option>
+                    </select>
+                </div>
+                </div>
             {productItems.map((productItem) =>{
                 count ++
                 return(
